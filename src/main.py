@@ -12,6 +12,16 @@ def main():
     print("10 * 5 =", multiply(10, 5))
     print("10 / 5 =", divide(10, 5))
 
+    try:
+        print("10 / 0 =", divide(10, 0))
+    except ValueError as error:
+        print("Error:", error)
+
+    try:
+        print("'10' + 5 =", add("10", 5))
+    except TypeError as error:
+        print("Error:", error)
+
 
 if __name__ == "__main__":
     main()
